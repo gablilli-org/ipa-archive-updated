@@ -27,9 +27,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyipng
+          pip install Pillow
 
-      - name: Fix CgBI PNGs
+      - name: Fix PNGs
         run: python fix_cgbi.py
 
       - name: Commit fixed PNGs
@@ -37,10 +37,10 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add data/*/*.png
-          git commit -m "fix CgBI PNGs" || echo "no PNG changes"
+          git commit -m "fix PNGs" || echo "no PNG changes"
           git push
 
-      - name: Run generate_repo_json.py
+      - name: Run script
         run: python generate_repo_json.py
 
       - name: Commit repo.json
