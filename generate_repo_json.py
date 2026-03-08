@@ -18,7 +18,7 @@ from pathlib import Path
 CACHE_DIR = Path(__file__).parent / 'data'
 
 # Default base URL for hosted assets (icon images)
-DEFAULT_BASE_URL = 'https://gablilli-org.github.io/ipa-archive-updated'
+DEFAULT_BASE_URL = 'https://raw.githubusercontent.com/gablilli-org/ipa-archive-updated/refs/heads/main'
 
 # NS* privacy usage description keys found in Info.plist files
 PRIVACY_KEYS = [
