@@ -59,7 +59,8 @@ def build_app_entry(entry: list, url_map: dict, base_url: str) -> dict:
     base = url_map.get(str(base_url_id), '')
     download_url = f'{base}/{path_name}' if base else path_name
     icon_url = f'{base_url}/data/{pk // 1000}/{pk}.jpg'
-    real_size = get_real_size(pk, size or 0)
+    # ipa.json stores sizes in KB (fsize/1024); convert back to bytes for repo.json
+    real_size = get_real_size(pk, (size or 0) * 1024)
 
     return {
         'name': title or '',
