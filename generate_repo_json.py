@@ -8,7 +8,7 @@ from pathlib import Path
 
 CACHE_DIR = Path(__file__).parent / 'data'
 
-DEFAULT_BASE_URL = 'https://raw.githubusercontent.com/gablilli-org/ipa-archive-updated/refs/heads/main'
+DEFAULT_BASE_URL = 'https://raw.githubusercontent.com/gablilli/archived-ipas/refs/heads/main'
 
 PRIVACY_KEYS = [
     'NSAppleEventsUsageDescription',
